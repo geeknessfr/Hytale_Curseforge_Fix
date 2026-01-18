@@ -1,7 +1,7 @@
 # Hytale CurseForge Fix (Windows)
 - Temporary Fix until CurseForge update - I'll remove this repo when fixed.
 
-This script fixes a CurseForge/Hytale mod setup issue on Windows by moving mods/plugins into the game install folder and linking Hytale’s roaming `UserData` folder to that location.
+This script fixes a CurseForge/Hytale mod setup issue with mods installed at the wrong location on Windows by moving mods/plugins into the game install folder and linking Hytale’s roaming `UserData` folder to that location.
 
 In short: your mods end up where the game expects them, and CurseForge stops writing to the “wrong” place.
 
