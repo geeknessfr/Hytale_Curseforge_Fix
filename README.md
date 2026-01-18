@@ -33,7 +33,7 @@ In short: your mods end up where the game expects them, and CurseForge stops wri
 ## How to use
 
 1. Close Hytale and CurseForge (recommended).
-2. Download `Hytale_CurseForge_Fix.ps1`.
+2. Download `Hytale_CurseForge_Fix.ps1`. (You can download it directly or in the [Releases](https://github.com/geeknessfr/Hytale_Curseforge_Fix/releases)
 3. Right click the script and run it with PowerShell (or run it from a PowerShell window).
 4. Accept the UAC prompt (admin permission).
 5. Read the output log. The script pauses at the end so you can see the result.
