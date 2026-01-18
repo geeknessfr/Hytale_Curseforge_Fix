@@ -53,6 +53,39 @@ That’s it. After this, Hytale and CurseForge should both use the game’s `Use
 - The script is designed to be safe: it never deletes conflicting files, it moves the “losing” version to backups.
 - If `%APPDATA%\UserData` is already a link, the script will detect it and do nothing.
 
-## License
 
-Choose whatever you want (MIT is common). 🙂
+## Troubleshooting (PowerShell / Windows security)
+
+Windows can block `.ps1` scripts depending on your system settings. If the script won’t run, try the steps below.
+
+### 1) Run with ExecutionPolicy bypass (recommended)
+Open **PowerShell as Administrator**, go to the script folder, then run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\Hytale_CurseForge_Fix.ps1
+```
+
+This bypasses restrictive execution policies **for this run only**.
+
+### 2) If Windows says the file is blocked (downloaded from the Internet)
+
+Sometimes Windows marks downloaded scripts as blocked. Unblock it, then run again:
+
+```powershell
+Unblock-File .\Hytale_CurseForge_Fix.ps1
+```
+
+### 3) Admin / UAC prompt
+
+Creating a directory symlink usually requires admin privileges (or Developer Mode).
+The script will request **UAC elevation** automatically. Click **Yes** when prompted.
+
+### 4) “It opens and closes immediately”
+
+Double-clicking a `.ps1` can behave differently depending on your Windows file associations.
+If that happens, run it from a PowerShell window using the command in step (1).
+
+### 5) Files are “in use” / cannot delete AppData\UserData
+
+Close Hytale and CurseForge, then run the script again. Some files may be locked while those apps are open.
+
